@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bookstore.MainActivity">
+    <LinearLayout
+        android:id="@+id/lnHeader"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_weight="8"
+            android:id="@+id/edtSearch"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:hint="Tìm sách..."
+            android:textSize="20dp"
+            android:textColor="@color/appColor"
+            android:background="@drawable/bg_radius"
+            android:drawableStart="@drawable/ic_baseline_screen_search_desktop_24"
+            android:drawablePadding="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <FrameLayout
+            android:id="@+id/rltCart"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                app:tint="@color/appColor" />
+            <TextView
+                android:id="@+id/tvCountCart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:textSize="20dp"
+                android:textColor="@color/appColor"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_radius"
+                android:layout_marginRight="23dp"
+                android:lineHeight="20dp"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                android:text="0"/>
+        </FrameLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv"
+        android:layout_below="@id/lnHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>
