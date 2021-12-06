@@ -99,7 +99,7 @@ public class SQLHelper extends SQLiteOpenHelper {
             int sao=cursor.getInt(cursor.getColumnIndex("sao"));
             long giaBan=cursor.getLong(cursor.getColumnIndex("giaban"));
 
-            list.add(new Book(id, img, tenSach, null, 0, null, sao, 0, giaBan, null));
+            list.add(new Book(id, img, tenSach, null, 0, null, sao, 0, giaBan, null, 0));
         }
         return list;
     }

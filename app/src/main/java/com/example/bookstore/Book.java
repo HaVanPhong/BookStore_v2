@@ -14,10 +14,18 @@ public class Book implements Parcelable {
     private int numberOfView;
     private long price;
     private String category;
+    private int amount;
 
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
 
     public Book(int id, String imageLink, String title, String author, int numOfPage,
-                String description, int rateStar, int numberOfView, long price, String category) {
+                String description, int rateStar, int numberOfView, long price, String category, int amount) {
         this.id= id;
         this.imageLink = imageLink;
         this.title = title;
@@ -28,6 +36,7 @@ public class Book implements Parcelable {
         this.numberOfView = numberOfView;
         this.price = price;
         this.category = category;
+        this.amount= amount;
     }
 
     public Book() {
@@ -51,6 +60,7 @@ public class Book implements Parcelable {
         numberOfView = in.readInt();
         price = in.readLong();
         category = in.readString();
+        amount= in.readInt();
     }
 
     public static final Creator<Book> CREATOR = new Creator<Book>() {
@@ -153,5 +163,6 @@ public class Book implements Parcelable {
         dest.writeInt(numberOfView);
         dest.writeLong(price);
         dest.writeString(category);
+        dest.writeInt(amount);
     }
 }

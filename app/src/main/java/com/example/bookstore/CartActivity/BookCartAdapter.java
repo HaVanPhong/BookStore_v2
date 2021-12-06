@@ -64,7 +64,9 @@ public class BookCartAdapter extends RecyclerView.Adapter<BookCartAdapter.ViewHo
 
     @Override
     public int getItemCount() {
+        if(list!=null)
         return list.size();
+        else return 0;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

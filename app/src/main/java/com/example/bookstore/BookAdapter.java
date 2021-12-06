@@ -49,12 +49,14 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
         Glide.with(context).load(book.getImageLink()).into(holder.img);
         holder.tvtt.setText(book.getTitle());
         holder.tvPr.setText(book.getPrice()+" vnđ");
+        holder.tvAmount.setText("Số lượng còn: "+ book.getAmount());
         holder.img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onClickItemBook.clickItem(book);
             }
         });
+
 
         holder.btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +75,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView img;
-        TextView tvtt, tvPr;
+        TextView tvtt, tvPr, tvAmount;
         Button btnAddToCart;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -81,6 +83,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
             tvtt=itemView.findViewById(R.id.tvtt);
             tvPr=itemView.findViewById(R.id.tvPr);
             btnAddToCart= itemView.findViewById(R.id.btnAddToCart);
+            tvAmount= itemView.findViewById(R.id.tvAmount);
         }
     }
     public void updateList(List<Book> books){

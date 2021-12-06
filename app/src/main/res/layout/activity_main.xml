@@ -50,14 +50,195 @@
                 android:text="0"/>
         </FrameLayout>
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcv"
+    <ScrollView
         android:layout_below="@id/lnHeader"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="100dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:text="Thể loại"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="120dp">
+                <HorizontalScrollView
+                    android:layout_width="fill_parent"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tvTruyenTranh"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Truyện tranh"
+                            android:background="@drawable/bg_theloai"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:id="@+id/tvthieuNien"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:text="Sách thiếu niên"
+                            android:background="@drawable/bg_theloai"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/white"
+                            />
+                        <TextView
+                            android:id="@+id/tvChinhTri"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:text="Sách chính trị"
+                            android:background="@drawable/bg_theloai"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/white"
+                            />
+                        <TextView
+                            android:id="@+id/tvVanHoc"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:text="Sách văn học"
+                            android:background="@drawable/bg_theloai"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
+                </HorizontalScrollView>
 
-    </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhà Xuất Bản"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="120dp">
+                <HorizontalScrollView
+                    android:layout_width="fill_parent"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tvNxbKimDong"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="NXB Kim Đồng"
+                            android:background="@drawable/bg_nxb"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:id="@+id/tvNxbTheGioi"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:text="NXB Thế Giới"
+                            android:background="@drawable/bg_nxb"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/tvNxbTre"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:text="NXB Trẻ"
+                            android:background="@drawable/bg_nxb"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/tvNxbPhuNu"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:text="NXB Phụ Nữ"
+                            android:background="@drawable/bg_nxb"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/tvNxbLaoDong"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:text="NXB Lao Động"
+                            android:background="@drawable/bg_nxb"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/black"
+                            />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvKqTk"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kết quả tìm kiếm"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:padding="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>
